@@ -60,7 +60,7 @@ function update() {
 function add() {
     var value = todoInput.value;
     if (value === '') {
-        alert("😮 Task cannot be empty")
+        alert("Task cannot be empty")
         return;
     }
     todoList.push({
