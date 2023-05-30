@@ -15,27 +15,26 @@
 
 body{
     position: relative;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(4, 4, 35);
+    background-color: rgb(22, 22, 151);
 }
-
-
 
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0 400px;
-    min-width: 500px;
+    margin: 0 500px;
+    min-width: 400px;
     max-width: 1000px;
     background-image: linear-gradient(aqua, rgb(249, 146, 164));
     border-radius: 20px;
     padding: 20px;
 }
+
 /* header */
 
 .container header {
@@ -48,13 +47,12 @@ body{
 }
 
 header h1 {
-    font-size: 30px;
-    font-weight: bolder;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
+    font-size: 35px;
+    font-weight: inherit;
+    margin-bottom: 15px;
+    letter-spacing: 1.5px;
     word-spacing: 5px;
 }
-
 
 /* input-section */
 
@@ -62,31 +60,31 @@ header .input-section {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 100%;
 }
 
 .input-section input {
-    margin-right: 10px;
+    margin-right: 15px;
     max-width: 100%;
 }
 .max-w-xs {
-    max-width: 20rem;
+    max-width: 25rem;
 }
 .w-full {
     width: 100%;
 }
 
 .input {
-    border-radius: 0.5rem;
-    height: 3rem;
+    border-radius: 1rem;
+    height: 2.5rem;
     border-width: 2px black solid;
     flex-shrink: 1;
     padding: 0rem 1rem;
     font-size: 1.2rem;
-    line-height: 2;
+    line-height: 3;
 }
 
 /* todofilters */
@@ -99,15 +97,15 @@ header .input-section {
     height: 100%;
     margin-bottom: 10px;
 }
-.filters {
-  margin-top: 10px;
-}
 
+.filters {
+  margin-top: 5px;
+}
 
 .todos-list {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     min-height: 100%;
     max-height: 54vh;
@@ -152,11 +150,9 @@ header .input-section {
     pointer-events: none;
 }
 
-
 .line{
     text-decoration: line-through;
 }
-
 
 /*buttons styling*/
 .btn{
@@ -207,7 +203,7 @@ header .input-section {
 }
 
 .btn-success:hover{
-    background-color: white;
+    background-color: rgb(222, 151, 151);
     color:rgb(50, 177, 50);
 }
 
@@ -217,8 +213,8 @@ header .input-section {
     color: white
 }
 .btn-error:hover{
-    background-color: white;
-    color:rgb(246, 77, 4);
+    background-color: rgb(243, 225, 225);
+    color:rgb(255, 77, 0);
 }
 /*
 dropdown*/
@@ -227,8 +223,8 @@ dropdown*/
     color: white;
     padding: 10px 16px;
     font-size: 16px;
-    border: none;
-    cursor: pointer;
+    border: salmon;
+    cursor: grab;
     border-radius: 5px;
   }
   
@@ -240,9 +236,9 @@ dropdown*/
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #78b3a4;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 12px 12px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
   
@@ -253,18 +249,16 @@ dropdown*/
     display: block;
   }
   
-  .dropdown-content a:hover {background-color: #f1f1f1}
+  .dropdown-content a:hover {background-color: #b39696}
   
   .dropdown:hover .dropdown-content {
     display: block;
   }
   
   .dropdown:hover .dropbtn {
-    background-color: white;
-    color: yellowgreen;
+    background-color: rgb(199, 159, 159);
+    color: rgb(191, 243, 87);
   }
-
-
 
 /* Responsive */
 @media only screen and (max-width: 530px) {
