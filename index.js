@@ -7,12 +7,10 @@ var deleteAllButton = document.getElementById("delete-all")
 var allTodos = document.getElementById("all-todos");
 var deleteSButton = document.getElementById("delete-selected")
 
-
 //event listners for add and delete
 addButton.addEventListener("click", add)
 deleteAllButton.addEventListener("click", deleteAll)
 deleteSButton.addEventListener("click", deleteS)
-
 
 //event listeners for filtersk
 document.addEventListener('click', (e) => {
@@ -40,7 +38,6 @@ todoInput.addEventListener('keypress', (e) => {
     }
 });
 
-
 //updates the all the remaining, completed and main list
 function update() {
     comdoList = todoList.filter((ele) => {
@@ -52,7 +49,6 @@ function update() {
     })
     document.getElementById("r-count").innerText = todoList.length.toString();
     document.getElementById("c-count").innerText = comdoList.length.toString();
-
 }
 
 //adds the task in main list
@@ -68,12 +64,10 @@ function add() {
         id: Date.now().toString(),
         complete: false,
     });
-
     todoInput.value = "";
     update();
     addinmain(todoList);
 }
-
 
 //renders the main list and views on the main content
 
@@ -103,10 +97,8 @@ function deleteTodo(e) {
     todoList = todoList.filter((ele) => {
         return ele.id != deleted
     })
-
     update();
     addinmain(todoList);
-
 }
 
 //completes indiviaula task and updates all the list
@@ -124,35 +116,25 @@ function completeTodo(e) {
             }
         }
     })
-
     update();
     addinmain(todoList);
 }
 
-
 //deletes all the tasks
 function deleteAll(todo) {
-
     todoList = []
-
     update();
     addinmain(todoList);
-
 }
 
 //deletes only completed task
 function deleteS(todo) {
-
     todoList = todoList.filter((ele) => {
         return !ele.complete;
     })
-
-
     update();
     addinmain(todoList);
-
 }
-
 
 // functions for filters
 function viewCompleted() {
@@ -160,7 +142,6 @@ function viewCompleted() {
 }
 
 function viewRemaining() {
-
     addinmain(remList);
 }
 function viewAll() {
