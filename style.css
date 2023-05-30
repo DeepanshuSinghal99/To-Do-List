@@ -28,7 +28,7 @@ body{
     margin: 0 500px;
     min-width: 400px;
     max-width: 1000px;
-    background-image: repeating-radial-gradient(aqua, rgb(249, 146, 164));
+    background-image: radial-gradient(aqua, rgb(249, 146, 164));
     border-radius: 20px;
     padding: 20px;
 }
